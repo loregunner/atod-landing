@@ -11,6 +11,17 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    files: ['**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx'],
+    plugins: {
+      '@next/next': nextjs,
+    },
+    rules: {
+      // Aquí es donde agregas las reglas a deshabilitar
+      '@next/next/no-img-element': 'off',
+      // Otras reglas que quieras deshabilitar...
+    },
+  },
 ];
 
 export default eslintConfig;
