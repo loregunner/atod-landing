@@ -11,20 +11,18 @@
   transform: translate(-50%, -50%);
   width: 1000px;
   height: auto;
-  opacity: 0.40;
+  opacity: 1;
   z-index: 0;
   pointer-events: none;
   object-fit: contain;
 }
-
-
 
 .banner-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 5rem ;
   background: #EFEFEF;
   z-index: 1;
   min-height: 500px;
@@ -56,11 +54,12 @@
 
 .banner-left button {
   margin-top: 10px;
+  width: 250px;
   padding: 12px 24px;
   border: none;
   background-color: black;
   color: white;
-  font-weight: bold;
+  font-size: 1.1rem;
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
@@ -107,13 +106,28 @@
   background: #00000061;
   color: #5B4A38;
   border-radius: 15px;
-  padding: 18px 28px;
-  min-width: 150px;
-  min-height: 90px;
+  padding: 15px;
+  width: 130px;
   font-size: 1.1rem;
   gap: 6px;
 }
 
 .fas{
   width: 40px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .banner-center img {
+  display: none;
+  }
+  .banner-content {
+  flex-wrap: wrap;
+  padding:  10px 20px;
+  gap: 10px;
+  }
+  .banner-background {
+    width: 350px;
+  }
 }

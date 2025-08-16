@@ -37,3 +37,9 @@
       transform: translateX(calc(-100px * 6 ));
     }
   }
+
+  @media (max-width: 768px) {
+ .banner-slider .slide-track{
+    gap: 30px;
+  }
+}
