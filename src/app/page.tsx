@@ -1,12 +1,9 @@
-// src/app/page.tsx
-import Header from "./components/Header/Header";
-import Banner from "./components/Banner/Banner";
+import { HomePage } from "@/feature/homePage/HomePage";
 
-export default function HomePage() {
+export default function Page() {
   return (
     <>
-      <Header />
-      <Banner />
+      <HomePage />
     </>
   );
 }
