@@ -1,17 +1,36 @@
+import { primaryBrown } from "@/utils/constants.style";
 import styled from "styled-components";
 
 export const WrapperBanner = styled.section`
-  grid-column: 1 / 7;
   margin-top: -2rem;
   .banner-content {
     display: flex;
     flex-direction: column;
     padding: 2rem;
     z-index: 1;
+    position: relative;
+    z-index: 1;
   }
+  .banner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .banner-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 280px;
+    height: 100px;
+    margin-top: 10rem;
+    background: url("/contact-decor.webp") no-repeat center center;
+    background-size: cover;
     filter: grayscale(100%) brightness(0.9);
+    transform: translate(-50%, -50%);
   }
+
   .banner-left {
     display: flex;
     flex-direction: column;
@@ -83,12 +102,12 @@ export const WrapperBanner = styled.section`
     color: #5b4a38;
     border-radius: 15px;
     padding: 15px;
-    width: 172px;
+    width: 132px;
     height: 180px;
     font-size: 1.1rem;
     gap: 6px;
     p {
-      font-size: 20px;
+      font-size: 14px;
     }
   }
 
@@ -96,18 +115,34 @@ export const WrapperBanner = styled.section`
     width: 40px;
   }
 
-  @media (min-width: 768px) {
-    grid-column: 1 / 9;
-    .banner-content {
-      flex-direction: column;
-      padding: 30px 50px;
+  @media (min-width: 508px) {
+    .banner {
+      width: 100%;
+    }
+    .banner-left {
+      width: 100%;
+      position: relative;
     }
     .banner-background {
-      width: 350px;
+      width: 100%;
+      height: 300px;
+      margin-top: 12rem;
+    }
+
+    .banner-content {
+      flex-direction: row;
+      padding: 30px 50px;
+    }
+    .banner-right {
+      grid-template-columns: 1fr 1fr;
+    }
+    .stat {
+      p {
+        color: white;
+      }
     }
   }
   @media (min-width: 1280px) {
-    grid-column: 1 / 13;
     width: 100%;
     display: flex;
     align-content: center;
@@ -120,6 +155,10 @@ export const WrapperBanner = styled.section`
       align-items: center;
       justify-content: center;
       z-index: 1;
+    }
+    .banner-background {
+      width: 50rem;
+      background-size: cover;
     }
     .banner-content {
       flex-direction: row;
@@ -161,9 +200,13 @@ export const WrapperBanner = styled.section`
       gap: 10px;
       padding: 0;
     }
-    .banner-background {
-      width: 350px;
-      filter: grayscale(100%) brightness(0.9);
+    .stat {
+      width: 172px;
+      height: 180px;
+      p {
+        font-size: 20px;
+        color: ${primaryBrown};
+      }
     }
   }
 `;

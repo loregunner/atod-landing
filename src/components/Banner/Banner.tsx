@@ -25,15 +25,9 @@ const stats = [
 export default function Banner() {
   return (
     <WrapperBanner id="inicio">
-      <Image
-        src="/contact-decor.webp"
-        alt="Fondo decorativo"
-        className="banner-background"
-        fill
-        priority
-        style={{ objectFit: "scale-down" }}
-      />
-
+      <div className="banner">
+        <div className="banner-background"></div>
+      </div>
       <div className="banner-content">
         <div className="banner-left">
           <h2>
