@@ -104,10 +104,11 @@ export const WrapperWe = styled.div`
       grid-template-columns: 1fr;
     }
     .container-left p {
-      padding: 0 5rem;
+      padding: 0 10rem;
     }
     .container-rigth {
       grid-template-columns: 1fr 1fr;
+      padding: 0 5rem;
       gap: 1rem;
     }
     .card_container {
@@ -119,7 +120,7 @@ export const WrapperWe = styled.div`
       grid-template-columns: 1fr 1fr;
     }
     .container-left p {
-      padding: 3rem 0 0 12rem;
+      padding: 3rem 0 0 10rem;
       font-size: 40px;
     }
     .container-rigth {

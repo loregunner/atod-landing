@@ -102,8 +102,11 @@ export const WrapperBanner = styled.section`
       flex-direction: column;
       padding: 30px 50px;
     }
+    .banner-right {
+      max-width: 1000px;
+    }
     .banner-background {
-      width: 350px;
+      width: 560px;
     }
   }
   @media (min-width: 1280px) {
