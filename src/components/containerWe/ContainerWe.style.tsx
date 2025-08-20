@@ -118,6 +118,7 @@ export const WrapperWe = styled.div`
   @media (min-width: 1280px) {
     .container-internal {
       grid-template-columns: 1fr 1fr;
+      max-width: 400px;
     }
     .container-left p {
       padding: 3rem 0 0 10rem;
