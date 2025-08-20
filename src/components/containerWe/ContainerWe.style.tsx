@@ -30,8 +30,8 @@ export const WrapperWe = styled.div`
   }
 
   .container-internal {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     padding: 3rem 8rem;
     align-items: center;
@@ -45,7 +45,7 @@ export const WrapperWe = styled.div`
     align-items: center;
   }
 
-  .container-left img {
+  img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -55,13 +55,13 @@ export const WrapperWe = styled.div`
   .container-left p {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 43%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 1.2rem;
     font-weight: 400;
     text-align: center;
-    padding: 1rem 2rem;
+    padding: 1rem -1rem;
     width: 100%;
     text-align: left;
   }
@@ -100,38 +100,60 @@ export const WrapperWe = styled.div`
   }
 
   @media (min-width: 768px) {
-    .container-internal {
-      grid-template-columns: 1fr;
+    .container-left {
+      width: -webkit-fill-available;
     }
     .container-left p {
-      padding: 0 10rem;
+      padding: 0 8rem;
+      font-size: 48px;
+        padding: 1rem 0 0 10rem;
     }
     .container-rigth {
       grid-template-columns: 1fr 1fr;
       padding: 0 5rem;
       gap: 1rem;
     }
+    img {
+      width: 100%;
+    }
     .card_container {
       padding: 1 5rem;
     }
   }
   @media (min-width: 1280px) {
+    height: 43rem;
     .container-internal {
-      grid-template-columns: 1fr 1fr;
-      max-width: 400px;
+      position: relative;
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin: 0;
+    }
+    .container-left {
+      width: 50rem;
     }
     .container-left p {
-      padding: 3rem 0 0 10rem;
+      width: 700px;
+      padding: 3rem 0 0 6rem;
       font-size: 40px;
     }
     .container-rigth {
-      padding: 3rem 8rem 0 0;
+      width: 700px;
+      padding: 3rem 0 0 0;
     }
-    .container-left img {
-      width: 500%;
-      height: auto;
+    .container-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 800px;
+    }
+    img {
+      width: 100%; 
+      height: 100%; 
       object-fit: cover;
-      opacity: 25%;
+      opacity: 0.25;
     }
   }
 `;

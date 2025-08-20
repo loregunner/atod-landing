@@ -2,8 +2,11 @@ import React from "react";
 import { WrapperWe } from "./ContainerWe.style";
 import Image from "next/image";
 import { LibsSVG } from "@/utils/libsSVG";
+import useMediaCustom from "@/hooks/useMediaCustom";
 
 const ContainerWe = () => {
+  const { isDesktop } = useMediaCustom();
+
   const optionsWe = [
     {
       title: "Quiénes somos",
@@ -35,12 +38,17 @@ const ContainerWe = () => {
         <hr className="hr-right" />
       </div>
       <div className="container-internal">
+        {isDesktop && (
+          <div className="container-image">
+            <Image src={LibsSVG.carWhite} alt={"car_container"} />
+          </div>
+        )}
         <div className="container-left">
-            <Image src={LibsSVG.carWhite} alt={"car_container"}/>
+          {!isDesktop && <Image src={LibsSVG.carWhite} alt={"car_container"} />}
           <p>
             En <span>ATOD Garage la caja automática</span> no es una parte más:
             es el <span>corazón eléctrico</span> de tu auto... y
-            <span>nuestro escenario favorito.</span>
+            <span> nuestro escenario favorito.</span>
           </p>
         </div>
         <div className="container-rigth">

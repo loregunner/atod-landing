@@ -44,7 +44,7 @@ export const WrapperHeader = styled.header`
       gap: 3rem;
     }
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     grid-column: 1 / 13;
     font-size: 20px;
   }
