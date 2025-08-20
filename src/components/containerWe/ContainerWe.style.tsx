@@ -4,6 +4,9 @@ import styled from "styled-components";
 export const WrapperWe = styled.div`
   background-color: #000000;
   color: #f5f5f5;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 10px 38px -5px rgba(0, 0, 0, 0.8);
   .content-title {
     display: flex;
     flex-direction: row;
@@ -15,13 +18,13 @@ export const WrapperWe = styled.div`
   .hr-left {
     width: 100%;
     border: 1px solid #f5f5f5;
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .hr-right {
     width: 200px;
     border: 1px solid #f5f5f5;
-    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .content-title h2 {
@@ -32,10 +35,10 @@ export const WrapperWe = styled.div`
   .container-internal {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 3rem 8rem;
+    justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    gap: 30px;
+    padding-bottom: 2rem;
   }
 
   .container-left {
@@ -55,7 +58,7 @@ export const WrapperWe = styled.div`
   .container-left p {
     position: absolute;
     top: 50%;
-    left: 43%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-size: 1.2rem;
@@ -106,7 +109,7 @@ export const WrapperWe = styled.div`
     .container-left p {
       padding: 0 8rem;
       font-size: 48px;
-        padding: 1rem 0 0 10rem;
+      padding: 1rem 0 0 10rem;
     }
     .container-rigth {
       grid-template-columns: 1fr 1fr;
@@ -121,7 +124,7 @@ export const WrapperWe = styled.div`
     }
   }
   @media (min-width: 1280px) {
-    height: 43rem;
+    height: 37rem;
     .container-internal {
       position: relative;
       width: 100%;
@@ -136,11 +139,12 @@ export const WrapperWe = styled.div`
     }
     .container-left p {
       width: 700px;
-      padding: 3rem 0 0 6rem;
+      padding: 3rem 0 0 2rem;
       font-size: 40px;
     }
     .container-rigth {
-      width: 700px;
+      width: 600px;
+      margin: 0 3rem 0 0;
       padding: 3rem 0 0 0;
     }
     .container-image {
@@ -150,8 +154,8 @@ export const WrapperWe = styled.div`
       width: 800px;
     }
     img {
-      width: 100%; 
-      height: 100%; 
+      width: 85%;
+      height: 100%;
       object-fit: cover;
       opacity: 0.25;
     }

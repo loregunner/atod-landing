@@ -8,7 +8,6 @@ export const WrapperServicies = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
     gap: 30px;
   }
   .content-title {
@@ -43,8 +42,7 @@ export const WrapperServicies = styled.div`
   }
 
   .service-item {
-    min-width: 250px;
-    max-width: 400px;
+    width: 100%;
   }
 
   .content-services img {
@@ -57,6 +55,7 @@ export const WrapperServicies = styled.div`
     align-items: center;
     padding: 0 30px;
     gap: 30px;
+    width: fit-content;
   }
 
   p {
@@ -71,7 +70,7 @@ export const WrapperServicies = styled.div`
       align-items: center;
     }
     .service-item {
-      max-width: 500px;
+      width: 500px;
     }
   }
   @media (min-width: 1280px) {
