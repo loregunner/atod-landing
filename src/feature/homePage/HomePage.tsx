@@ -1,9 +1,9 @@
 "use client";
 
-import BannerHeader from "../bannerHeader/BannerHeader";
-import Services from "@/components/Services/Services";
 import ContainerWe from "@/components/containerWe/ContainerWe";
 import Form from "@/components/Form/Form";
+import Services from "@/components/Services/Services";
+import BannerHeader from "../bannerHeader/BannerHeader";
 import { ContainerATOD } from "./HomePage.style";
 
 export const HomePage = () => {
