@@ -13,5 +13,8 @@ const nextConfig = {
     locales: ["en", "de", "fr"],
   },
   react: { useSuspense: false },
+    env: {
+    REACT_NEXT_PUBLIC_API_URL: process.env.REACT_NEXT_PUBLIC_API_URL,
+  },
 };
 module.exports = nextConfig;
