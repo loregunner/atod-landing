@@ -1,9 +1,7 @@
 import axios from "axios";
 
 const baseURL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "https://atod-back.onrender.com/appointments";
-
+  `${process.env.REACT_NEXT_PUBLIC_API_URL}/appointments`
 export const useAppointments = () => {
   const getAppointments = async () => {
     try {
@@ -31,4 +29,16 @@ export const useAppointments = () => {
     getAppointments,
     createAppointment,
   };
+};
+
+export const generateAvailableHours = (start = 8, end = 17) => {
+  const hours: string[] = [];
+  for (let h = start; h < end; h++) {
+    for (let m of [0, 30]) {
+      const hour = String(h).padStart(2, "0");
+      const minute = String(m).padStart(2, "0");
+      hours.push(`${hour}:${minute}`);
+    }
+  }
+  return hours;
 };

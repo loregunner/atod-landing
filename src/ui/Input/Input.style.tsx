@@ -1,4 +1,4 @@
-import { primaryGold } from "@/utils/constants.style";
+import { error500, primaryGold } from "@/utils/constants.style";
 import styled from "styled-components";
 
 export const WrapperInput = styled.div`
@@ -12,7 +12,11 @@ export const WrapperInput = styled.div`
     font-weight: 500;
     color: #333;
   }
-
+  .error_input {
+    font-size: 14px;
+    color: ${error500};
+    margin: -10px 0 10px 0;
+  }
   input {
     padding: 10px 14px;
     border: 1px solid black;
@@ -33,14 +37,13 @@ export const WrapperInput = styled.div`
       content: "";
       position: absolute;
       top: 50%;
-      right: 12px; /* distancia desde el borde derecho */
-      width: 50px; /* tamaño del icono */
-      height: 50px; /* tamaño del icono */
-      background-image: url("/icon-arrow.svg"); /* tu icono */
+      right: 12px;
+      width: 50px;
+      height: 50px;
       background-size: contain;
       background-repeat: no-repeat;
       transform: translateY(-50%);
-      pointer-events: none; /* que no bloquee clicks */
+      pointer-events: none;
     }
   }
 `;
