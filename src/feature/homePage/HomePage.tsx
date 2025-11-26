@@ -5,21 +5,34 @@ import Form from "@/components/Form/Form";
 import Services from "@/components/Services/Services";
 import BannerHeader from "../bannerHeader/BannerHeader";
 import { ContainerATOD } from "./HomePage.style";
+import Map from "@/components/Map/Map";
+import Footer from "@/components/Footer/Footer";
 
 export const HomePage = () => {
   return (
     <ContainerATOD>
-      <div className="container-grid">
+      <div id="inicio" className="container-grid">
         <BannerHeader />
       </div>
-      <div className="container-grid">
+
+      <div id="servicios" className="container-grid">
         <Services />
       </div>
-      <div className="container-grid">
+
+      <div id="nosotros" className="container-grid">
         <ContainerWe />
       </div>
-      <div className="container-grid">
+
+      <div id="contacto" className="container-grid">
         <Form />
+      </div>
+
+      <div className="container-grid">
+        <Map />
+      </div>
+
+      <div id="footer" className="container-grid">
+        <Footer />
       </div>
     </ContainerATOD>
   );

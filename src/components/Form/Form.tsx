@@ -44,7 +44,7 @@ const Form = () => {
   const [appointments, setAppointments] = useState<any[]>([]);
   const [popupOpen, setPopupOpen, togglePopup] = usePopup(false);
   const [popupMessage, setPopupMessage] = useState("");
-  const [blockedHours, setBlockedHours] = useState<Record<string, string[]>>(
+  const [blockedHours, setBlockedHours] = useState<any>(
     {}
   );
   const [availableHours, setAvailableHours] = useState<string[]>([]);
@@ -77,15 +77,21 @@ const Form = () => {
     return isNaN(dateObject.getTime()) ? null : dateObject.toISOString();
   };
 
-  const fetchAppointments = async () => {
-    try {
-      const data = await getAppointments();
-      setAppointments(data);
-      setBlockedHours(getBlockedHoursByDate(data));
-    } catch (error) {
-      console.error("Error al obtener citas", error);
-    }
-  };
+const fetchAppointments = async () => {
+  try {
+    const data = await getAppointments();
+
+    const safeData = Array.isArray(data) ? data : [];
+
+    setAppointments(safeData);
+    setBlockedHours(getBlockedHoursByDate(safeData));
+  } catch (error) {
+    console.error("❌ Error al obtener citas:", error);
+    setAppointments([]);
+    setBlockedHours([]);
+  }
+};
+
 
   useEffect(() => {
     if (!formData.diagnosis_date) return;
