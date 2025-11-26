@@ -47,12 +47,9 @@ export default function Banner() {
         </div>
 
         <div className="banner-center">
-          <Image
-            src="/car-top.webp"
-            alt="Coche desde arriba"
-            width={200}
-            height={300}
-          />
+          <div className="car-container">
+            <Image src="/car-top.webp" alt="Coche desde arriba" fill />
+          </div>
         </div>
 
         <div className="banner-right">

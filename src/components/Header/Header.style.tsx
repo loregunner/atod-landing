@@ -7,7 +7,7 @@ export const WrapperHeader = styled.header`
   justify-content: center;
   align-items: center;
   padding: 30px 50px;
-  z-index: 100;
+  z-index: 1000;
   .nav-list {
     display: flex;
     flex-direction: row;

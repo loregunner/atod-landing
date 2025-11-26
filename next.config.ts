@@ -1,17 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
   compiler: {
     styledComponents: true,
   },
   images: {
     unoptimized: true,
   },
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "de", "fr"],
+  env: {
+    REACT_NEXT_PUBLIC_API_URL: process.env.REACT_NEXT_PUBLIC_API_URL,
   },
-  react: { useSuspense: false },
 };
+
 module.exports = nextConfig;

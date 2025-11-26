@@ -1,4 +1,5 @@
 // Select.style.ts
+import { error500 } from "@/utils/constants.style";
 import styled from "styled-components";
 
 export const WrapperSelect = styled.div`
@@ -12,6 +13,11 @@ export const WrapperSelect = styled.div`
     font-weight: 500;
   }
 
+  .select-container {
+    position: relative;
+    width: 100%;
+  }
+
   select {
     width: 100%;
     padding: 10px 40px 10px 12px;
@@ -23,10 +29,10 @@ export const WrapperSelect = styled.div`
     cursor: pointer;
   }
 
-  &::after {
+  .select-container::after {
     content: "";
     position: absolute;
-    top: 70%;
+    top: 50%;
     right: 12px;
     width: 0;
     height: 0;
@@ -36,4 +42,11 @@ export const WrapperSelect = styled.div`
     transform: translateY(-50%);
     pointer-events: none;
   }
+
+  .error-message {
+    font-size: 14px;
+    color: ${error500};
+    margin: 1rem 0 10px 0;
+  }
 `;
+

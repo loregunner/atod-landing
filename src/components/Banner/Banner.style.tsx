@@ -2,15 +2,19 @@ import { primaryBrown } from "@/utils/constants.style";
 import styled from "styled-components";
 
 export const WrapperBanner = styled.section`
-  margin-top: -2rem;
+  /* 🔥 Ya NO usamos margin-top negativo */
+  margin-top: 0;
+
+  /* 🔥 Para que el scroll ancle bien al inicio */
+  scroll-margin-top: 120px;
+
   .banner-content {
     display: flex;
     flex-direction: column;
     padding: 2rem;
-    z-index: 1;
     position: relative;
-    z-index: 1;
   }
+
   .banner {
     position: relative;
     display: flex;
@@ -55,7 +59,6 @@ export const WrapperBanner = styled.section`
   .banner-left p {
     color: white;
     font-size: 20px;
-    font-style: normal;
     width: 100%;
   }
 
@@ -63,15 +66,14 @@ export const WrapperBanner = styled.section`
     margin-top: 10px;
     width: 250px;
     padding: 12px 24px;
-    border: none;
     background-color: black;
     color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
+    border: none;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
     transition: background 0.2s;
   }
+
   .banner-left button:hover {
     background-color: #e3b84c;
     color: #222;
@@ -95,9 +97,7 @@ export const WrapperBanner = styled.section`
   .stat {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
     background: #00000061;
     color: #5b4a38;
     border-radius: 15px;
@@ -106,23 +106,22 @@ export const WrapperBanner = styled.section`
     height: 180px;
     font-size: 1.1rem;
     gap: 6px;
+
     p {
       font-size: 14px;
     }
-  }
-
-  .fas {
-    width: 40px;
   }
 
   @media (min-width: 508px) {
     .banner {
       width: 100%;
     }
+
     .banner-left {
       width: 100%;
       position: relative;
     }
+
     .banner-background {
       width: 100%;
       height: 300px;
@@ -133,37 +132,38 @@ export const WrapperBanner = styled.section`
       flex-direction: row;
       padding: 30px 50px;
     }
+
     .banner-right {
       grid-template-columns: 1fr 1fr;
     }
-    .stat {
-      p {
-        color: white;
-      }
+
+    .stat p {
+      color: white;
     }
   }
+
   @media (min-width: 1280px) {
     width: 100%;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+
     .banner-center {
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      z-index: 1;
+      align-items: center;
     }
+
     .banner-background {
       width: 50rem;
       background-size: cover;
     }
+
     .banner-content {
       flex-direction: row;
       padding: 30px 50px;
     }
+
     .banner-left {
       width: 55%;
       margin-top: 8rem;
@@ -173,23 +173,35 @@ export const WrapperBanner = styled.section`
     .banner-left h2 {
       position: absolute;
       top: 5rem;
-      left: 0;
       z-index: 10;
       color: black;
       width: max-content;
     }
+
     .banner-left p {
       color: #5b4a38;
       font-size: 20px;
-      font-style: normal;
       width: 140%;
     }
-    .banner-center img {
-      z-index: 5;
-      width: 33rem;
-      height: 40rem;
-      margin-top: 9rem;
+
+    .banner-center {
+      position: relative;
+      top: 10%;
     }
+
+    .car-container {
+      position: relative;
+      width: 33rem;
+      height: 40rem; 
+      overflow: visible; 
+            z-index: 10;
+    }
+
+    .car-img {
+      object-fit: contain;
+      transform: translateY(-3rem); 
+    }
+
     .banner-content {
       width: 80rem;
       height: 500px;
@@ -200,9 +212,11 @@ export const WrapperBanner = styled.section`
       gap: 10px;
       padding: 0;
     }
+
     .stat {
       width: 172px;
       height: 180px;
+
       p {
         font-size: 20px;
         color: ${primaryBrown};
